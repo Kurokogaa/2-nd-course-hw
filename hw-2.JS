@@ -11,6 +11,7 @@ alert(iphon)
 
 //3
 const name='Брендан Эйх'
+alert(name)
 
 //4
 let first = 10
@@ -52,5 +53,5 @@ let user = {
 }
 
 //10
-let person = Number(prompt('Какое ваше имя?'))
+let person = (prompt('Какое ваше имя?'))
 alert('Привет ' + person + '!')

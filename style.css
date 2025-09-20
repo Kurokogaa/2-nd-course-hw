@@ -31,7 +31,7 @@ a {
 .top__title {
   color: rgb(32, 32, 39);
   font-size: 64px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
   text-align: left;
@@ -45,7 +45,7 @@ a {
 S .top__description {
   color: rgb(32, 32, 39);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 32px;
   letter-spacing: 0px;
   text-align: left;
@@ -57,11 +57,12 @@ S .top__description {
   background: rgb(32, 32, 39);
   color: rgb(255, 255, 255);
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 29px;
   letter-spacing: 0%;
   text-align: center;
   padding: 16px 28px 16px 28px;
+  width: 247px;
 }
 
 .content {
@@ -79,7 +80,7 @@ S .top__description {
 .content__title {
   color: rgb(255, 255, 255);
   font-size: 64px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
   text-align: left;
@@ -145,7 +146,7 @@ S .top__description {
 .nav-card__name {
   color: rgb(32, 32, 39);
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
   text-align: left;
@@ -255,6 +256,7 @@ S .top__description {
   letter-spacing: 0%;
   text-align: center;
   background: rgb(32, 32, 39);
+  border: none;
   border-radius: 60px;
   width: 247px;
 }
@@ -268,9 +270,19 @@ S .top__description {
   .content {
     display: none;
   }
+  .game-card__right {
+    width: 100%;
+  }
+  .game-card-tipe-1 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .game-card-tipe-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .game-card__img {
     height: auto;
-    width: 80%;
   }
 }
 @media (max-width: 1024px) {
@@ -279,7 +291,7 @@ S .top__description {
     padding-right: 4.2%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .center {
     width: 100%;
     padding-left: 4.2%;
@@ -306,6 +318,10 @@ S .top__description {
   }
   .mini-games {
     padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
   }
   .mini-games-title {
     font-size: 40px;
