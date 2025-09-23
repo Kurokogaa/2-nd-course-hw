@@ -35,3 +35,15 @@ do {
     num++
 } while(n > 50)
 console.log('Количество итераций равно', num)
+
+//6
+let first = prompt('Какое число у первой пятницы месяца?')
+let today = 1
+let a
+do{
+    a = (today - first) % 7 
+    if(a == 0){
+        console.log('Сегодня пятница,', today, '-е число. Необходимо подготовить отчет.')
+    }
+    today++
+} while(today < 31)
