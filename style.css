@@ -257,7 +257,6 @@ S .top__description {
   letter-spacing: 0%;
   text-align: center;
   background: rgb(32, 32, 39);
-  border: none;
   border-radius: 60px;
   width: 247px;
 }
@@ -402,5 +401,26 @@ S .top__description {
   }
   .footer {
     height: 100px;
+  }
+}
+.button:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: all 1s ease-in-out;
+}
+
+.nav-card__card:hover {
+  transform: scale(1.1);
+  transition: all 1s ease-in-out;
+}
+
+@media (max-width: 765px) {
+  .button:hover {
+    transition: none;
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .nav-card__card:hover {
+    transform: none;
   }
 }/*# sourceMappingURL=style.css.map */

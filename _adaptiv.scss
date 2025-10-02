@@ -131,3 +131,27 @@
     }
 }   
 
+
+//Animations
+
+.button:hover{
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    transition: all 1s ease-in-out;
+}
+
+.nav-card__card:hover{
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+}
+
+@media (max-width: 765px) {
+    .button:hover{
+        transition: none;
+        background: rgba(32, 32, 39, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+    .nav-card__card:hover{
+        transform: none;
+    }
+}
