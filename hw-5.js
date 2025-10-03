@@ -18,7 +18,9 @@ let even = (a) => {
 
 //3
 let square = (a) => {
-    return a ** 2
+    let result = a ** 2
+    console.log(result)
+    return result
 }
 
 //4
@@ -26,10 +28,13 @@ let age = () => {
     
     let a = parseInt(prompt('Сколько вам лет?'))
     if(a < 0) {
+        console.log('Вы ввели неправильное значение')
         return 'Вы ввели неправильное значение'
     } else if(a < 13) {
+        console.log('Привет, друг!')
         return 'Привет, друг!'
     } else {
+        console.log('Добро пожаловать!')
         return 'Добро пожаловать!'
     }
 }

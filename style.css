@@ -17,7 +17,7 @@ a {
 }
 
 .top {
-  height: 800px;
+  height: 710px;
   background-image: url(./img/top-bcg.jpg);
   margin-top: 0;
   background-repeat: no-repeat;
@@ -63,6 +63,14 @@ S .top__description {
   text-align: center;
   padding: 16px 28px 16px 28px;
   width: 247px;
+}
+
+.running-line-box {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgb(188, 236, 48);
+  height: 90px;
 }
 
 .content {
@@ -422,5 +430,24 @@ S .top__description {
   }
   .nav-card__card:hover {
     transform: none;
+  }
+  .top {
+    background-image: url(./img/bcg-top-ad.svg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .running-line-box {
+    height: 52px;
+  }
+  .mini-games {
+    padding-bottom: 10px;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+  .mini-games-title-box {
+    margin-bottom: 48px;
   }
 }/*# sourceMappingURL=style.css.map */
