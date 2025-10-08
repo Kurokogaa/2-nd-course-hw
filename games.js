@@ -1,3 +1,4 @@
+//1
 document.getElementById('FirstGame').onclick = function FirstGame() {
     let min = 1
     let max = 100
@@ -22,4 +23,38 @@ document.getElementById('FirstGame').onclick = function FirstGame() {
     }
     
     alert('Правильно! Загадано число ' + RandomNumber)
+}
+
+document.getElementById('SecondGame').onclick = function SecondGame() {
+    //2
+    const options = ['+', '-', '*', '/'];
+    let randomIndex = Math.floor(Math.random() * options.length);
+    let operator = options[randomIndex];
+    let num1 = Math.floor(Math.random() * 20) + 1;
+    let num2 = Math.floor(Math.random() * 20) + 1;
+
+    if (operator === '/') {
+        num2 = Math.floor(Math.random() * 10) + 1;
+        num1 = num2 * (Math.floor(Math.random() * 10) + 1);
+    }
+
+    let correctAnswer;
+    switch(operator) {
+        case '+': correctAnswer = num1 + num2; break;
+        case '-': correctAnswer = num1 - num2; break;
+        case '*': correctAnswer = num1 * num2; break;
+        case '/': correctAnswer = num1 / num2; break;
+    }
+
+    let task = `${num1} ${operator} ${num2}`;
+    let userAnswer = parseInt(prompt(task + ' = '));
+
+    if (userAnswer === null || isNaN(userAnswer)) {
+        return
+    }  
+    while(userAnswer !== correctAnswer){
+        userAnswer = parseInt(prompt(`Неправильно, попробуй еще ${task}=`));
+    }
+
+    alert('Правильно!');
 }
