@@ -49,10 +49,10 @@ document.getElementById('SecondGame').onclick = function SecondGame() {
     let task = `${num1} ${operator} ${num2}`;
     let userAnswer = parseInt(prompt(task + ' = '));
 
-    if (userAnswer === null || isNaN(userAnswer)) {
-        return
-    }  
     while(userAnswer !== correctAnswer){
+        if (userAnswer === null || isNaN(userAnswer)) {
+            return
+        }
         userAnswer = parseInt(prompt(`Неправильно, попробуй еще ${task}=`));
     }
 

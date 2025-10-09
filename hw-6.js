@@ -1,5 +1,5 @@
 //1
-const numb = [1, 5, 4, 10, 0, 3];
+const numb = [1, 5, 4, 10, 0, 3]
 for (let i = 0; i < numb.length; i++) {
   console.log(numb[i])
   if(numb[i] == 10)break
@@ -7,7 +7,7 @@ for (let i = 0; i < numb.length; i++) {
 
 //2
 const mass1 = [1, 5, 4, 10, 0, 3]
-const index = mass1.indexOF(4)
+const index = mass1.indexOf(4)
 console.log(index)
 
 //3
@@ -31,6 +31,7 @@ console.log(mainMass)
 //5
 const pushMass = [1, 1, 1]
 pushMass.push(2, 2, 2)
+console.log(pushMass)
 
 //6
 const sortMass = [9, 8, 7, 'a', 6, 5]
@@ -53,7 +54,7 @@ do {
 
 //8
 let string = 'abcdef'
-const strMass = string.split("").sort().reverse().join()
+const strMass = string.split("").sort().reverse().join("")
 console.log(strMass)
 
 //9
@@ -100,11 +101,10 @@ const filteredRundom = rundomMass.filter(numb => numb % 2 === 0)
 console.log(filteredRundom)
 
 //15
-function generator(){
-    return Math.floor(Math.random() * 10) +1
-}
 const newRund = []
-for(let i = 0; i < 10; i++) {
+for(let i = 0; i < 6; i++) {
     newRund[i] = generator()
 }
 let midl = newRund.reduce((a, b) => a + b) / newRund.length;
+console.log(newRund)
+console.log(midl)
