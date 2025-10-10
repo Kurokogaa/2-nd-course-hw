@@ -17,26 +17,62 @@ console.log(Math.ceil(number))
 console.log(Math.round(number))
 
 //4
-fMass =[52, 53, 49, 77, 21, 32]
-console.log(Math.min(fMass))
-console.log(Math.max(fMass))
+fMass = [52, 53, 49, 77, 21, 32]
+console.log(Math.min(...fMass))
+console.log(Math.max(...fMass))
 
 //5
 let randomNumber = Math.floor(Math.random() * 10 + 1)
 console.log(randomNumber)
 
 //6
-let userNumber = Math.floor(randomNumber)
-
 function massFunction(userNumber) {
-    massLength = Math.round(userNumber / 2)
+    let massLength = Math.round(userNumber / 2)
     let Mass = []
-    for (i = 0; i < massLength; i++) {
+    for (let i = 0; i < massLength; i++) {
         Mass[i] = Math.floor(Math.random() * userNumber + 1)
     }
+    return Mass
 }
+
+let result = massFunction(10)
+console.log(result)
 
 //7
 let min = 1
-let max =10
-let ъ
+let max = 10
+let rand = Math.floor(Math.random() * (max - min + 1) + min)
+console.log(rand)
+
+//8
+let now = new Date()
+console.log(now)
+
+//9
+let currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 10)
+console.log(currentDate)
+
+//10
+function formatDateRussian(date) {
+    const months = [
+        'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+        'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+    ]
+    
+    const daysOfWeek = [
+        'воскресенье', 'понедельник', 'вторник', 'среда',
+        'четверг', 'пятница', 'суббота'
+    ]
+    
+    const day = date.getDate()
+    const month = months[date.getMonth()]
+    const year = date.getFullYear()
+    const dayOfWeek = daysOfWeek[date.getDay()]
+    
+    const hours = String(date.getHours()).padStart(2, '0')
+    const minutes = String(date.getMinutes()).padStart(2, '0')
+    const seconds = String(date.getSeconds()).padStart(2, '0')
+    
+    return `Дата: ${day} ${month} ${year} — это ${dayOfWeek}.\nВремя: ${hours}:${minutes}:${seconds}`
+}

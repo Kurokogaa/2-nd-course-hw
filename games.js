@@ -1,4 +1,4 @@
-//1
+//1 Угадай число
 document.getElementById('FirstGame').onclick = function FirstGame() {
     let min = 1
     let max = 100
@@ -25,8 +25,8 @@ document.getElementById('FirstGame').onclick = function FirstGame() {
     alert('Правильно! Загадано число ' + RandomNumber)
 }
 
+//2 Простая математика
 document.getElementById('SecondGame').onclick = function SecondGame() {
-    //2
     const options = ['+', '-', '*', '/'];
     let randomIndex = Math.floor(Math.random() * options.length);
     let operator = options[randomIndex];
@@ -57,4 +57,59 @@ document.getElementById('SecondGame').onclick = function SecondGame() {
     }
 
     alert('Правильно!');
+}
+
+//3 Переверни текст
+document.getElementById('ThirdGame').onclick = function ThirdGame() {
+    let text = prompt('Введите текст')
+    let textReverse = text.split('').reverse().join('')
+    alert(textReverse)
+}
+
+//4 Викторина
+document.getElementById('fifthGame').onclick = function fifthGame() {
+    const quiz = [
+        {
+            question: "Какой цвет неба?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ]
+    
+    let score = 0;
+    
+    for(let i = 0; i < quiz.length; i++) {
+        let input = prompt(`${quiz[i].question}\n${quiz[i].options.join('\n')}\n\nВведите номер правильного ответа:`)
+        
+        if (input === null) {
+            alert('Викторина прервана')
+            return;
+        }
+        
+        let userAnswer = parseInt(input)
+        
+        if(userAnswer === quiz[i].correctAnswer) {
+            score++;
+            alert('Правильно!')
+        } else if (!isNaN(userAnswer)) {
+            alert(`Неправильно! Правильный ответ: ${quiz[i].correctAnswer}`)
+        } else {
+            alert('Пожалуйста, введите число!')
+            i--
+        }
+    }
+    
+    let message = `Количество правильных ответов: ${score} из ${quiz.length}`
+    alert(message)
+    return message
 }
