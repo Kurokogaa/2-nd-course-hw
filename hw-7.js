@@ -1,36 +1,37 @@
-//1
+//1 
 let str = 'js'
 console.log(str.toUpperCase())
 
-//2
+//2 
 let fMass = ['Ржаной хлеб', 'Молоко', 'Хлеб бородинский', 'Квашеный хлеб', 'хлеб на квасе']
 str = 'хлеб'
 function secondStr(fMass, str){
     let sortMass = fMass.filter(food => food.toLowerCase().startsWith(str.toLowerCase()))
     return sortMass
 }
+console.log(secondStr(fMass, str)) 
 
-//3
+//3 
 let number = 32.58884
 console.log(Math.floor(number))
 console.log(Math.ceil(number))
 console.log(Math.round(number))
 
-//4
+//4 
 fMass = [52, 53, 49, 77, 21, 32]
 console.log(Math.min(...fMass))
 console.log(Math.max(...fMass))
 
-//5
+//5 
 let randomNumber = Math.floor(Math.random() * 10 + 1)
 console.log(randomNumber)
 
-//6
+//6 
 function massFunction(userNumber) {
     let massLength = Math.round(userNumber / 2)
     let Mass = []
     for (let i = 0; i < massLength; i++) {
-        Mass[i] = Math.floor(Math.random() * userNumber + 1)
+        Mass[i] = Math.round(Math.random() * userNumber)
     }
     return Mass
 }
@@ -38,22 +39,23 @@ function massFunction(userNumber) {
 let result = massFunction(10)
 console.log(result)
 
-//7
-let min = 1
-let max = 10
-let rand = Math.floor(Math.random() * (max - min + 1) + min)
-console.log(rand)
+//7 
+function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min) 
+}
 
-//8
+console.log(rand(1, 10))
+
+//8 
 let now = new Date()
 console.log(now)
 
-//9
+//9 
 let currentDate = new Date();
-currentDate.setDate(currentDate.getDate() + 10)
+currentDate.setDate(currentDate.getDate() + 73)
 console.log(currentDate)
 
-//10
+//10 
 function formatDateRussian(date) {
     const months = [
         'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
@@ -76,3 +78,4 @@ function formatDateRussian(date) {
     
     return `Дата: ${day} ${month} ${year} — это ${dayOfWeek}.\nВремя: ${hours}:${minutes}:${seconds}`
 }
+console.log(formatDateRussian(new Date()))
