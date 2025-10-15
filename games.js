@@ -113,3 +113,30 @@ document.getElementById('fifthGame').onclick = function fifthGame() {
     alert(message)
     return message
 }
+
+//5 Камень ножницы бумага
+document.getElementById('fourthGame').onclick = function fourth() {
+    
+    const user = prompt('Напишите каменть, ножницы или бумага').toLowerCase()
+    const computerIndex = Math.floor(Math.random() * 3)
+    const variants = ['камень', 'ножницы', 'бумага']
+    const computer = variants[computerIndex]
+
+    if(!variants.includes(user)){
+        console.log('Неверно, попробуйте еще раз')
+        return fourth()
+    }
+
+    alert(`Ваш выбор ${user}, а выбор комьютера ${computer}`)
+    
+    if(user === computer){
+        alert('Ничья')
+    } else if(
+        (user == 'камень' && computer == 'ножницы') ||
+        (user == 'ножницы' && computer == 'бумага') ||
+        (user == 'бумага' && computer == 'камень')) {
+            alert('Вы выиграли!')
+        } else {
+            alert('Компьютер выиграл')
+        }
+}
