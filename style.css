@@ -480,4 +480,7 @@ S .top__description {
   .mini-games-title-box {
     margin-bottom: 48px;
   }
+  .image-track img {
+    height: 52px;
+  }
 }/*# sourceMappingURL=style.css.map */
