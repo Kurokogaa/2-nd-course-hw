@@ -5,6 +5,7 @@
   font-optical-sizing: auto;
   font-style: normal;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .center {
@@ -294,6 +295,35 @@ S .top__description {
   text-align: center;
 }
 
+.image-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.image-track {
+  display: flex;
+  animation: scroll-images 30s linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.image-track img {
+  height: 90px;
+  width: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+@keyframes scroll-images {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 @media (max-width: 1200px) {
   .content {
     display: none;
