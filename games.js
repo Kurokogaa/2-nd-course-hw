@@ -140,3 +140,16 @@ document.getElementById('fourthGame').onclick = function fourth() {
             alert('Компьютер выиграл')
         }
 }
+
+//6 Генератор случайных чисел
+document.getElementById('sixth-game').onclick = function sixth() {
+    const colors = ['red', 'blue', 'white', 'green', 'pink', 'yellow', 'purple', 'orange'];
+    
+    const colorIndex = Math.floor(Math.random() * colors.length);
+    const finishColor = colors[colorIndex];
+
+    const bcg = document.querySelector('.mini-games');
+    
+    bcg.style.backgroundImage = 'none'
+    bcg.style.backgroundColor = finishColor;
+}
